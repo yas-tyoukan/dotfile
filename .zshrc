@@ -14,9 +14,7 @@ SAVEHIST=1000000
 
 setopt share_history
 
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)" 
-
+export GOPATH=~
 export GOENV_ROOT=$HOME/.goenv
 export PATH=$GOENV_ROOT/bin:$PATH
 eval "$(goenv init -)"
@@ -28,4 +26,15 @@ alias dc='docker-compose'
 alias ll='ls -l'
 alias da='direnv allow'
 alias z='source ~/.zshrc'
+alias gpwd='git symbolic-ref --short HEAD'
+alias gc='git status -sbu no | cut -b 4-'
+alias nr='npm run'
+alias az='unset AWS_VAULT && aws-vault exec y -- zsh'
 
+export PLANTUML_LIMIT_SIZE=8192
+
+source ~/.zplug.sh
+
+eval "$(anyenv init - zsh)"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
