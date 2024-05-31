@@ -33,7 +33,7 @@ alias az='unset AWS_VAULT && aws-vault exec y -- zsh'
 
 export PLANTUML_LIMIT_SIZE=8192
 
-source ~/.zplug.sh
+source ~/.zplug/init.zsh
 
 eval "$(anyenv init - zsh)"
 export VOLTA_HOME="$HOME/.volta"
